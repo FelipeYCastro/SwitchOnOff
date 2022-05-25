@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box */
+}
+
+body {
+  background: #dfdfdf;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toogle-wrapper label {
+  cursor: pointer;
+}
+
+.slider {
+  background: #ccc;
+  width: 40px;
+  height: 20px;
+  border: 2px solid #bbb;
+  border-radius: 20px;
+  position: relative;
+}
+
+.button {
+  background: deeppink;
+  border: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  pointer-events: none;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: all 300ms ease-in-out;
+}
+
+.toogle-input:checked ~ .slider {
+  background: deeppink;
+}
+
+.toogle-input:checked ~ .slider > .button {
+  background: #ccc;
+  left: 23px;
+}
+
+.toogle-input {
+  display: none;
+}
